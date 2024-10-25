@@ -3,29 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .main{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form{
+            display: flex; 
+            flex-direction: column; 
+            width: 300px;
+        }
+    </style>
     <title>Cadastro</title>
 </head>
 <body>
-    <h2>Cadastro de usuário</h2>
+    
+    
+    <div class="main">
 
-    <form action="cadastro.php" method="post">
+        <h2>Cadastro de usuário</h2>
+
+        <form action="cadastro.php" method="post" class="form">
         
-        <label for="name">Nome</label>
-        <input type="text" name="name" id="name">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name"> 
+    
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"> 
+    
+            <label for="code">Código</label>
+            <input type="text" name="code" id="code"> 
+    
+            <label for="title">Título</label>
+            <input type="text" name="title" id="title"> 
+    
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password"> 
+    
+            <input type="submit" value="Enviar">
+        </form>
 
-        <label for="email">email</label>
-        <input type="email" name="email" id="email">
+    </div>
 
-        <label for="code">code</label>
-        <input type="text" name="code" id="code">
 
-        <label for="title">Título</label>
-        <input type="text" name="title" id="title">
-
-        <label for="password">Senha</label>
-        <input type="password" name="password" id="password">
-
-        <input type="submit" value="enviar">
-    </form>
 </body>
 </html>

@@ -25,12 +25,18 @@ class UserController {
 
         // $row = mysqli_fetch_array($result);
 
-        return $result;
+        return $result->fetch_assoc();
     }
 
     public function updateTitle($email, $new_title){
         $result = $this->model->updateTitle($email, $new_title);
 
         return $result;
+    }
+
+    public function loginUser($email, $password){
+        $result = $this->model->loginUser($email, $password);
+
+        return $result->fetch_assoc();
     }
 }

@@ -42,6 +42,18 @@ class UserModel{
 		    return -1;
 		}
     }
+
+    public function loginUser($email, $password){
+        $query = "SELECT * FROM users WHERE email_user = ? AND password_user = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param('ss',$email, $password);
+        if ($stmt->execute()){
+            return $stmt->get_result();
+        } else {
+            return -1;
+        }
+        
+    }
 }
 
 ?>

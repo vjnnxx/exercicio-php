@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .main{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form{
+            display: flex; 
+            flex-direction: column; 
+            width: 300px;
+        }
+    </style>
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="main">
+        <h2>Login</h2>
+
+        <form action="login.php" method="post" class="form">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email"> 
+    
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password">
+
+            <input type="submit" value="Entrar">
+        </form>
+    </div>
+    
+</body>
+</html>

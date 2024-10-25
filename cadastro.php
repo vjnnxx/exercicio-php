@@ -43,7 +43,7 @@
     $controller = new UserController($conn);
     $result = $controller->createUser($user_data);
 
-    $register = $controller->getUserByEmail($_POST["email"])->fetch_assoc();
+    $register = $controller->getUserByEmail($_POST["email"]);
 
 
     $user_email = $register['email_user'];
@@ -60,7 +60,7 @@
     
     $controller->updateTitle($user_email, $result_title);
 
-    echo("Cadastro realizado com sucesso!")
+    echo("Cadastro realizado com sucesso!");
  
 ?>
 
